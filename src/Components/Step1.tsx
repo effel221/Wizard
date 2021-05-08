@@ -7,25 +7,17 @@ import {StepProps} from "./App";
 
 
 const Step1: FunctionComponent<StepProps> = (props) => {
-    const {formContent, setFormContent} = props;
-
-    const onInputChange = useCallback((e: ChangeEvent<HTMLInputElement>, type: string) => {
-        const obj = {
-            ...formContent,
-            [type]: e.target.value
-        };
-        setFormContent(obj);
-    }, []);
+    const {formContent, formElemChange} = props;
 
     return (
         <Page title={"Step1"}>
             <div className="input-item">
                 <label>Name</label>
-                <input type='text' value={formContent.name} placeholder="Input Your Name here..." onChange={(e) => onInputChange(e, 'name')}/>
+                <input type='text' value={formContent.name} placeholder="Input Your Name here..." onChange={(e) => formElemChange(e, 'name')}/>
             </div>
             <div className="input-item">
                 <label>Email</label>
-                <input type="email" value={formContent.email} placeholder="Input Your email here..." onChange={(e) => onInputChange(e, 'email')}/>
+                <input type="email" value={formContent.email} placeholder="Input Your email here..." onChange={(e) => formElemChange(e, 'email')}/>
             </div>
             <div className="input-item">
                 <Link to="/step/2">
