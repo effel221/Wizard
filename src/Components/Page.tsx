@@ -1,12 +1,11 @@
 import React, { FunctionComponent } from 'react';
 import './Page.scss'
 import Card from "./Card";
+import {ComponentWithTitle} from "./App";
 
-interface PageProps {
-    title: string
-}
 
-const Page: FunctionComponent<PageProps> = ({title,children}) => {
+const Page: FunctionComponent<ComponentWithTitle> = ({title,children}) => {
+
     return (
         <div className="container">
             <h1>Wizard Form</h1>

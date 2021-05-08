@@ -1,9 +1,10 @@
-import React, {useEffect} from "react";
+import React, {FunctionComponent, useEffect} from "react";
 import Page from "./Page";
 import {Link} from "react-router-dom";
+import {StepProps} from "./App";
 
 
-const Step2 = () => {
+const Step2:FunctionComponent<StepProps> = (props, setFormContent) => {
 
     useEffect(() => {
 

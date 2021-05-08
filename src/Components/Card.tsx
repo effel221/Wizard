@@ -1,11 +1,9 @@
 import React, { FunctionComponent } from 'react';
 import './Card.scss'
+import {ComponentWithTitle} from "./App";
 
-interface CardProps {
-    title: string
-}
 
-const Card: FunctionComponent<CardProps> = ({title, children}) => {
+const Card: FunctionComponent<ComponentWithTitle> = ({title, children}) => {
     return (
         <div className="card">
            <h2>{title}</h2>
