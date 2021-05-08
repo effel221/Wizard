@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from "react";
 import './App.scss'
-
+import Card from "./Card";
 
 
 const App = () => {
@@ -10,7 +10,10 @@ const App = () => {
     }, []);
 
     return (
-       <div>Hello world!</div>
+        <div className='container'>
+            <h1>Wizard Form</h1>
+            <Card title='sss'>sfsfdsfd</Card>
+        </div>
     );
 };
 

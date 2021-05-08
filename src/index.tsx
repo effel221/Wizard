@@ -4,7 +4,6 @@ import {createStore, applyMiddleware} from "redux";
 import {Provider} from "react-redux";
 import thunk from "redux-thunk";
 import {rootReducer} from "./redux/reducer"
-import "regenerator-runtime/runtime";
 import {composeWithDevTools} from 'redux-devtools-extension';
 
 import App from './Components/App';
