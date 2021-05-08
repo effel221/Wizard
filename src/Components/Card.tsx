@@ -1,10 +1,9 @@
 import React, { FunctionComponent } from 'react';
 import './Card.scss'
 
-type CardProps = {
+interface CardProps {
     title: string
 }
-
 
 const Card: FunctionComponent<CardProps> = ({title, children}) => {
     return (

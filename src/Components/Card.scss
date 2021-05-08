@@ -1,8 +1,13 @@
 @import '../sass/colors.scss';
 
 .card {
-  width: 90%;
-  max-width: 1000px;
-  height: 500px;
-  background: white;
+  width: 100%;
+
+  h2 {
+    margin: 20px 0;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    color: $color-blue-dark;
+  }
 }

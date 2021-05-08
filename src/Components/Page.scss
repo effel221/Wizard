@@ -1,0 +1,28 @@
+@import '../sass/colors.scss';
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1 {
+  margin: 0 0 40px;
+  font-size: 24px;
+}
+
+.wizard-form-content {
+  width: 90%;
+  max-width: 1000px;
+  height: 500px;
+  background: white;
+  padding: 0 20px;
+
+  form {
+    width: 100%;
+  }
+}
+

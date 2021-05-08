@@ -1,14 +1,23 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
+    "outDir": "./built",
     "noImplicitAny": true,
     "module": "es6",
     "target": "es5",
     "jsx": "react",
-    "allowJs": true,
+    "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "rootDir": "./src",
     "esModuleInterop": true,
     "moduleResolution": "node"
-  }
+  },
+  "include": [
+    "./**/*"
+  ],
+  "exclude": [
+    "./plugins/**/*",
+    "./typings/**/*",
+    "./built/**/*",
+    "node_modules"
+  ]
 }
