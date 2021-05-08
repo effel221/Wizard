@@ -1,0 +1,49 @@
+@import '../sass/reset.scss';
+@import '../sass/colors.scss';
+
+
+body, html {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  color: #333333;
+  font-size: 16px;
+}
+.chat-content {
+  height: 95%;
+  width: 100%;
+  padding: 10px;
+}
+.chat-wrap-card {
+  width: 100%;
+  text-align: right;
+  margin: 0 0 15px;
+
+  .MuiPaper-root {
+    display: inline-block;
+    padding: 10px 25px;
+    background: $color-blue-dark;
+    color: #ffffff;
+  }
+
+  &.chat-bot {
+    text-align: left;
+
+    .MuiPaper-root {
+      background: $color-pink-dirty-dark;
+    }
+  }
+}
+.chat-area {
+  overflow-y: auto;
+  height: 93vh;
+  background: $color-gray;
+}
+.chat-input {
+  background: #ffffff;
+}
+.chat-init-error {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  color: $color-pink;
+}
