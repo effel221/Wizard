@@ -8,7 +8,7 @@ interface PageProps {
 
 const Page: FunctionComponent<PageProps> = ({title,children}) => {
     return (
-        <div className='container'>
+        <div className="container">
             <h1>Wizard Form</h1>
             <div className="wizard-form-content">
                 <form>

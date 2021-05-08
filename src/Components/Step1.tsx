@@ -12,17 +12,17 @@ const Step1 = () => {
     }, []);
 
     return (
-       <Page title={'Step1'}>
+       <Page title={"Step1"}>
            <div className="input-item">
                <label>Name</label>
-               <input type='text' placeholder='Input Your Name here...'/>
+               <input type='text' placeholder="Input Your Name here..."/>
            </div>
            <div className="input-item">
                <label>Email</label>
-               <input type="email" placeholder='Input Your email here...'/>
+               <input type="email" placeholder="Input Your email here..."/>
            </div>
            <div className="input-item">
-               <button><Link to="/step/2">Next Step</Link></button>
+               <Link to="/step/2"><button style={{float: 'right'}}>Next Step</button></Link>
            </div>
        </Page>
     );

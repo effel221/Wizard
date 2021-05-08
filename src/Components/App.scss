@@ -10,3 +10,21 @@ body, html {
   background: $color-gray;
 }
 
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px 5px;
+  border: 1px solid $color-pink-dirty-dark;
+  box-sizing: border-box;
+}
+
+button {
+  min-width: 100px;
+  text-align: center;
+  margin: 0 3px;
+  padding: 10px 20px;
+  background: $color-blue;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}

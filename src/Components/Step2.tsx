@@ -19,10 +19,10 @@ const Step2 = () => {
                 </select>
             </div>
             <div className="input-item">
-                <label>Already 18 years old</label>
+                <label>Already have 18 years old?</label>
                 <input type="checkbox" />
             </div>
-            <button><Link to="/">Back</Link></button>
+            <Link to="/"><button>Back</button></Link>
             <button>Submit</button>
         </Page>
     );
