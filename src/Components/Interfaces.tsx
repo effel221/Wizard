@@ -2,7 +2,7 @@ import {ChangeEvent} from "react";
 
 // Scope of interfaces, exported for using in whole project
 export interface ComponentWithTitle {
-    title: string
+    title?: string
 }
 
 export interface FormContentProps {

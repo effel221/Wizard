@@ -17,19 +17,19 @@ const Step2: FunctionComponent<StepProps> = (props) => {
     }, [formContent]);
 
 // Sending all collected data from form to server
-    const sendToServer = () => {
-        fetch('http://localhost:3000/api', {
+    const sendToServer = async () => {
+        await fetch('http://localhost:3000/api', {
             method: 'POST',
             mode: 'cors',
             body: JSON.stringify(formContent)
-        });
+        }).then(() => console.log('Done'));
     }
 
     return (
         <Page title={'Step2'}>
             <div className="input-item">
                 <label>Gender</label>
-                <select value={formContent.gender} onChange={(e) => formElemChange(e, 'gender')}>
+                <select aria-label="gender" value={formContent.gender} onChange={(e) => formElemChange(e, 'gender')}>
                     <option>Male</option>
                     <option>Female</option>
                 </select>
@@ -37,13 +37,14 @@ const Step2: FunctionComponent<StepProps> = (props) => {
             <div className="input-item">
                 <label>Already have 18 years old?</label>
                 <input type="checkbox"
+                       aria-label="age"
                        defaultChecked={!!formContent.isAdult}
                        onChange={(e) => checkOnChange(e)}/>
             </div>
             <Link to="/">
                 <button>Back</button>
             </Link>
-            <button onClick={sendToServer} type='button'>Submit</button>
+            <button aria-label="submit" onClick={sendToServer} type='button'>Submit</button>
         </Page>
     );
 };

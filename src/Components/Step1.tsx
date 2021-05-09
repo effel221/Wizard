@@ -13,12 +13,12 @@ const Step1: FunctionComponent<StepProps> = (props) => {
         <Page title={"Step1"}>
             <div className="input-item">
                 <label>Name</label>
-                <input type='text' value={formContent.name} placeholder="Input Your Name here..."
+                <input aria-label="inputName" type='text' value={formContent.name} placeholder="Input Your Name here..."
                        onChange={(e) => formElemChange(e, 'name')}/>
             </div>
             <div className="input-item">
                 <label>Email</label>
-                <input type="email" value={formContent.email} placeholder="Input Your email here..."
+                <input aria-label="inputEmail" type="email" value={formContent.email} placeholder="Input Your email here..."
                        onChange={(e) => formElemChange(e, 'email')}/>
             </div>
             <div className="input-item">

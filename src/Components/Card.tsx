@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from 'react';
 import './Card.scss'
-import {ComponentWithTitle} from "./App";
+import {ComponentWithTitle} from "./Interfaces";
 
-
+// Card wrapper for form elements
 const Card: FunctionComponent<ComponentWithTitle> = ({title, children}) => {
     return (
         <div className="card">
