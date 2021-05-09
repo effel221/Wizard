@@ -29,14 +29,19 @@ export interface StepProps {
 
 
 const App = () => {
-    const [formContent, setFormContent] = useState<FormContentProps>({});
+    const [formContent, setFormContent] = useState<FormContentProps>({
+        name: '',
+        email: '',
+        gender: 'Female',
+        isAdult: false
+    });
     const formElemChange:FormElemChange = useCallback((e, type) => {
         const obj = {
             ...formContent,
             [type]: e.target.value
         };
         setFormContent(obj);
-    }, []);
+    }, [formContent]);
 
     const settings = {
         formContent,

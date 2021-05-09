@@ -14,13 +14,17 @@ const Step2: FunctionComponent<StepProps> = (props) => {
     const checkOnChange = useCallback((e) => {
         const obj = {
             ...formContent,
-            isAdult: !e.target.value
+            isAdult: e.target.checked
         };
         setFormContent(obj);
-    }, []);
+    }, [formContent]);
 
     const sendToServer = () => {
-      
+        fetch('http://localhost:3000/api', {
+            method: 'POST',
+            mode: 'cors',
+            body: JSON.stringify(formContent)
+        });
     }
 
     return (
@@ -41,7 +45,7 @@ const Step2: FunctionComponent<StepProps> = (props) => {
             <Link to="/">
                 <button>Back</button>
             </Link>
-            <button onClick={sendToServer}>Submit</button>
+            <button onClick={sendToServer} type='button'>Submit</button>
         </Page>
     );
 };
