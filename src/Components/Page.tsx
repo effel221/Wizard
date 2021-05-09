@@ -1,9 +1,9 @@
 import React, { FunctionComponent } from 'react';
 import './Page.scss'
 import Card from "./Card";
-import {ComponentWithTitle} from "./App";
+import {ComponentWithTitle} from "./Interfaces";
 
-
+// Page general/parent wrapper for all form steps
 const Page: FunctionComponent<ComponentWithTitle> = ({title,children}) => {
 
     return (

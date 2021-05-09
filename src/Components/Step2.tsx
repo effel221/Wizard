@@ -1,16 +1,13 @@
-import React, {ChangeEvent, FunctionComponent, useCallback, useEffect} from "react";
+import React, {FunctionComponent, useCallback} from "react";
 import Page from "./Page";
 import {Link} from "react-router-dom";
-import {StepProps} from "./App";
+import {StepProps} from "./Interfaces";
 
-
+// Second page of form with actions
 const Step2: FunctionComponent<StepProps> = (props) => {
     const {formContent, formElemChange, setFormContent} = props;
 
-    useEffect(() => {
-
-    }, []);
-
+// Helper for actions on isAdult CheckBox change
     const checkOnChange = useCallback((e) => {
         const obj = {
             ...formContent,
@@ -19,6 +16,7 @@ const Step2: FunctionComponent<StepProps> = (props) => {
         setFormContent(obj);
     }, [formContent]);
 
+// Sending all collected data from form to server
     const sendToServer = () => {
         fetch('http://localhost:3000/api', {
             method: 'POST',
